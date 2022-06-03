@@ -12,6 +12,10 @@ let vl_conta = document.getElementsByTagName('td')
 
 
 function calcular(){
+
+    if (txt_salario_be.value == 0 &&txt_salario_lu.value == 0){
+        alert('Verifique os salários iniciais')
+    } else{
     //calcula totais do salario
     let sl_total = Number(txt_salario_be.value) + Number(txt_salario_lu.value)
     let porc_be = (Number(txt_salario_be.value)*100)/sl_total
@@ -40,6 +44,7 @@ function calcular(){
     vl_conta[4].innerHTML = `R$: ${(dividir_conta(Number(txt_internet.value),porc_be)).toFixed(2)}`
     vl_conta[5].innerHTML = `R$: ${(dividir_conta(Number(txt_internet.value),porc_lu)).toFixed(2)}`
     vl_conta[6].innerHTML = `R$: ${(Number(txt_agua.value)+Number(txt_aluguel.value)+Number(txt_internet.value)).toFixed(2)}`
+}
 
 }
 
