@@ -29,13 +29,13 @@ function calcular(){
     txt_porc_sl_lu.innerHTML = `% Salario Lu: ${100-porc_be.toFixed()}%`
     
     //inclui os valores na tabela
-    vl_conta[0].innerHTML = `${dividir_conta(Number(txt_agua.value),porc_be)}`
-    vl_conta[1].innerHTML = `${dividir_conta(Number(txt_agua.value),porc_lu)}`
-    vl_conta[2].innerHTML = `${dividir_conta(Number(txt_aluguel.value),porc_be)}`
-    vl_conta[3].innerHTML = `${dividir_conta(Number(txt_aluguel.value),porc_lu)}`
-    vl_conta[4].innerHTML = `${dividir_conta(Number(txt_internet.value),porc_be)}`
-    vl_conta[5].innerHTML = `${dividir_conta(Number(txt_internet.value),porc_lu)}`
-    vl_conta[6].innerHTML = `${Number(txt_agua.value)+Number(txt_aluguel.value)+Number(txt_internet.value)}`
+    vl_conta[0].innerHTML = `R$: ${(dividir_conta(Number(txt_agua.value),porc_be)).toFixed(2)}`
+    vl_conta[1].innerHTML = `R$: ${(dividir_conta(Number(txt_agua.value),porc_lu)).toFixed(2)}`
+    vl_conta[2].innerHTML = `R$: ${(dividir_conta(Number(txt_aluguel.value),porc_be)).toFixed(2)}`
+    vl_conta[3].innerHTML = `R$: ${(dividir_conta(Number(txt_aluguel.value),porc_lu)).toFixed(2)}`
+    vl_conta[4].innerHTML = `R$: ${(dividir_conta(Number(txt_internet.value),porc_be)).toFixed(2)}`
+    vl_conta[5].innerHTML = `R$: ${(dividir_conta(Number(txt_internet.value),porc_lu)).toFixed(2)}`
+    vl_conta[6].innerHTML = `R$: ${(Number(txt_agua.value)+Number(txt_aluguel.value)+Number(txt_internet.value)).toFixed(2)}`
 
 }
 
