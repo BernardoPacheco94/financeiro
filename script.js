@@ -9,13 +9,7 @@ let txt_porc_sl_be = document.querySelector('div#porc_sl_be')
 let txt_porc_sl_lu = document.querySelector('div#porc_sl_lu')
 let vl_conta = document.getElementsByTagName('td')
 
-/*tb_contas = {
-    tipo_conta : {
-        nome_conta : '',
-        vl_be : 0,
-        vl_lu: 0,
-    }
-}*/
+
 
 function calcular(){
     //calcula totais do salario
@@ -27,7 +21,17 @@ function calcular(){
     salario_total.innerHTML = `Salario total: R$ ${sl_total}`
     txt_porc_sl_be.innerHTML = `% Salario Be: ${porc_be.toFixed()}%`
     txt_porc_sl_lu.innerHTML = `% Salario Lu: ${100-porc_be.toFixed()}%`
-    
+
+    /*
+    tb_contas = {
+        tipo_conta : {
+            nome_conta : '',
+            vl_be : 0,
+            vl_lu: 0,
+        }
+    }
+    */
+   
     //inclui os valores na tabela
     vl_conta[0].innerHTML = `R$: ${(dividir_conta(Number(txt_agua.value),porc_be)).toFixed(2)}`
     vl_conta[1].innerHTML = `R$: ${(dividir_conta(Number(txt_agua.value),porc_lu)).toFixed(2)}`
@@ -38,6 +42,7 @@ function calcular(){
     vl_conta[6].innerHTML = `R$: ${(Number(txt_agua.value)+Number(txt_aluguel.value)+Number(txt_internet.value)).toFixed(2)}`
 
 }
+
 
 function dividir_conta (vl_total_conta, porcentagem){
     let a_pagar = (vl_total_conta*porcentagem)/100
