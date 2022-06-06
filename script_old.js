@@ -22,7 +22,7 @@ function calcular(){
     let porc_lu = (Number(txt_salario_lu.value)*100)/sl_total
     
     //seta totais no html
-    salario_total.innerHTML = `Salario total: R$ ${sl_total}`
+    salario_total.innerHTML = `Salario total: R$ ${sl_total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
     txt_porc_sl_be.innerHTML = `% Salario Be: ${porc_be.toFixed()}%`
     txt_porc_sl_lu.innerHTML = `% Salario Lu: ${100-porc_be.toFixed()}%`
 
@@ -37,13 +37,13 @@ function calcular(){
     */
    
     //inclui os valores na tabela
-    vl_conta[0].innerHTML = `R$: ${(dividir_conta(Number(txt_agua.value),porc_be)).toFixed(2)}`
-    vl_conta[1].innerHTML = `R$: ${(dividir_conta(Number(txt_agua.value),porc_lu)).toFixed(2)}`
-    vl_conta[2].innerHTML = `R$: ${(dividir_conta(Number(txt_aluguel.value),porc_be)).toFixed(2)}`
-    vl_conta[3].innerHTML = `R$: ${(dividir_conta(Number(txt_aluguel.value),porc_lu)).toFixed(2)}`
-    vl_conta[4].innerHTML = `R$: ${(dividir_conta(Number(txt_internet.value),porc_be)).toFixed(2)}`
-    vl_conta[5].innerHTML = `R$: ${(dividir_conta(Number(txt_internet.value),porc_lu)).toFixed(2)}`
-    vl_conta[6].innerHTML = `R$: ${(Number(txt_agua.value)+Number(txt_aluguel.value)+Number(txt_internet.value)).toFixed(2)}`
+    vl_conta[0].innerHTML = `R$: ${(dividir_conta(Number(txt_agua.value),porc_be)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+    vl_conta[1].innerHTML = `R$: ${(dividir_conta(Number(txt_agua.value),porc_lu)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+    vl_conta[2].innerHTML = `R$: ${(dividir_conta(Number(txt_aluguel.value),porc_be)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+    vl_conta[3].innerHTML = `R$: ${(dividir_conta(Number(txt_aluguel.value),porc_lu)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+    vl_conta[4].innerHTML = `R$: ${(dividir_conta(Number(txt_internet.value),porc_be)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+    vl_conta[5].innerHTML = `R$: ${(dividir_conta(Number(txt_internet.value),porc_lu)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+    vl_conta[6].innerHTML = `R$: ${(Number(txt_agua.value)+Number(txt_aluguel.value)+Number(txt_internet.value)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
 }
 
 }
