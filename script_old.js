@@ -3,7 +3,6 @@ let txt_salario_lu = document.querySelector('input#salario_lu')
 let txt_agua = document.querySelector('input#txt_agua')
 let txt_aluguel = document.querySelector('input#txt_aluguel')
 let txt_internet = document.querySelector('input#txt_internet')
-let tb_contas = document.querySelector('tbody#tb_contas')
 let salario_total = document.querySelector('div#salario_total')
 let txt_porc_sl_be = document.querySelector('div#porc_sl_be')
 let txt_porc_sl_lu = document.querySelector('div#porc_sl_lu')
@@ -26,24 +25,15 @@ function calcular(){
     txt_porc_sl_be.innerHTML = `% Salario Be: ${porc_be.toFixed()}%`
     txt_porc_sl_lu.innerHTML = `% Salario Lu: ${100-porc_be.toFixed()}%`
 
-    /*
-    tb_contas = {
-        tipo_conta : {
-            nome_conta : '',
-            vl_be : 0,
-            vl_lu: 0,
-        }
-    }
-    */
    
     //inclui os valores na tabela
-    vl_conta[0].innerHTML = `R$: ${(dividir_conta(Number(txt_agua.value),porc_be)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
-    vl_conta[1].innerHTML = `R$: ${(dividir_conta(Number(txt_agua.value),porc_lu)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
-    vl_conta[2].innerHTML = `R$: ${(dividir_conta(Number(txt_aluguel.value),porc_be)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
-    vl_conta[3].innerHTML = `R$: ${(dividir_conta(Number(txt_aluguel.value),porc_lu)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
-    vl_conta[4].innerHTML = `R$: ${(dividir_conta(Number(txt_internet.value),porc_be)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
-    vl_conta[5].innerHTML = `R$: ${(dividir_conta(Number(txt_internet.value),porc_lu)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
-    vl_conta[6].innerHTML = `R$: ${(Number(txt_agua.value)+Number(txt_aluguel.value)+Number(txt_internet.value)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+    vl_conta[0].innerHTML = `${(dividir_conta(Number(txt_agua.value),porc_be)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+    vl_conta[1].innerHTML = `${(dividir_conta(Number(txt_agua.value),porc_lu)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+    vl_conta[2].innerHTML = `${(dividir_conta(Number(txt_aluguel.value),porc_be)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+    vl_conta[3].innerHTML = `${(dividir_conta(Number(txt_aluguel.value),porc_lu)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+    vl_conta[4].innerHTML = `${(dividir_conta(Number(txt_internet.value),porc_be)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+    vl_conta[5].innerHTML = `${(dividir_conta(Number(txt_internet.value),porc_lu)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+    vl_conta[6].innerHTML = `${(Number(txt_agua.value)+Number(txt_aluguel.value)+Number(txt_internet.value)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
 }
 
 }
