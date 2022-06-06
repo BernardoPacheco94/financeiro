@@ -19,7 +19,7 @@ function calcular() {
         let porc_lu = (Number(txt_salario_lu.value) * 100) / sl_total
 
         //seta totais no html
-        salario_total.innerHTML = `Salario total: R$ ${sl_total.toFixed(2)}`
+        salario_total.innerHTML = `Salario total: R$ ${sl_total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
         txt_porc_sl_be.innerHTML = `% Salario Be: ${porc_be.toFixed()}%`
         txt_porc_sl_lu.innerHTML = `% Salario Lu: ${100 - porc_be.toFixed()}%`
 
@@ -27,8 +27,8 @@ function calcular() {
 
 
         //Retorna os valores na div
-        vl_a_pagar_be.innerHTML = `<h2>A PAGAR</h2>Valor Be - R$: ${dividir_conta(Number(txt_dividir.value),porc_be).toFixed(2)}`
-        vl_a_pagar_lu.innerHTML = `Valor Lu - R$: ${dividir_conta(Number(txt_dividir.value),porc_lu).toFixed(2)}`
+        vl_a_pagar_be.innerHTML = `<h2>A PAGAR</h2>Valor Be - R$: ${dividir_conta(Number(txt_dividir.value),porc_be).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+        vl_a_pagar_lu.innerHTML = `Valor Lu - R$: ${dividir_conta(Number(txt_dividir.value),porc_lu).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
         
         
     }
