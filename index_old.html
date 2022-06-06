@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Finanças</title>
+</head>
+<body>
+    <header>
+        <h1>Divisão de contas</h1>
+    </header>
+    <section>
+        <h2>Salários</h2>
+        <div>
+            <label for="salario_be">Salário Be:</label>
+            <input type="number" name="salario_be" id="salario_be">
+        </div>
+
+        <div>
+            <label for="salario_lu">Salário Lulu:</label>
+            <input type="number" name="salario_lu" id="salario_lu">
+        </div>
+
+        <h2>Valores Contas:</h2>
+        <div>
+            <label for="txt_agua">Água: </label>
+            <input type="number" name="txt_agua" id="txt_agua">
+        </div>
+
+        <div>
+            <label for="txt_aluguel">Aluguel: </label>
+            <input type="number" name="txt_aluguel" id="txt_aluguel">
+        </div>
+
+        <div>
+            <label for="txt_internet">Internet: </label>
+            <input type="number" name="txt_internet" id="txt_internet">
+        </div>
+
+        <br>
+
+        <input type="button" value="CALCULAR" onclick="calcular()" id="btn_calcular">
+        <div id="salario_total">
+            Salario total: 
+        </div>
+
+        <div id="porc_sl_be">
+            % Salario Be: 
+        </div>
+
+        <div id="porc_sl_lu">
+            % Salario Lulu: 
+        </div>    
+
+
+        <h2>A Pagar</h2>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Conta</th>
+                        <th>Valor Be</th>
+                        <th>Valor Lu</th>
+                    </tr>
+                </thead>
+                <tbody id="tb_contas">
+        
+                    <tr>
+                        <th>Água</th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Aluguel</th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Internet </th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="2">TOTAL</th>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <p>Desenvolvido por Bernardo Pacheco</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
