@@ -19,7 +19,7 @@ function calcular() {
         let porc_lu = (Number(txt_salario_lu.value) * 100) / sl_total
 
         //seta totais no html
-        salario_total.innerHTML = `Salario total: R$ ${sl_total}`
+        salario_total.innerHTML = `Salario total: R$ ${sl_total.toFixed(2)}`
         txt_porc_sl_be.innerHTML = `% Salario Be: ${porc_be.toFixed()}%`
         txt_porc_sl_lu.innerHTML = `% Salario Lu: ${100 - porc_be.toFixed()}%`
 
