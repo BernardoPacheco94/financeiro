@@ -27,8 +27,8 @@ function calcular() {
 
 
         //Retorna os valores na div
-        vl_a_pagar_be.innerHTML = `<h2>A PAGAR</h2>Valor Be - R$: ${dividir_conta(Number(txt_dividir.value),porc_be).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
-        vl_a_pagar_lu.innerHTML = `Valor Lu - R$: ${dividir_conta(Number(txt_dividir.value),porc_lu).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`        
+        vl_a_pagar_be.innerHTML = `<h2>A PAGAR</h2>Valor Be - ${dividir_conta(Number(txt_dividir.value),porc_be).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`
+        vl_a_pagar_lu.innerHTML = `Valor Lu - ${dividir_conta(Number(txt_dividir.value),porc_lu).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`        
         
     }
 
